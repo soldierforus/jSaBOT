@@ -1,0 +1,18 @@
+{
+  "name": "jSaBOT",
+  "version": "1.1.1",
+  "description": "A Twitter bot capable of searching and retweeting multiple keywords",
+  "author": "Travis Bennett",
+  "license": "CC-BY-3.0",
+  "repository": "https://github.com/soldierforus/jSaBOT.git",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "twit": "^2.1.1"
+  },
+  "bin": {
+    "jSaBOT": "jSaBOT.js"
+  }
+}

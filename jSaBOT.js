@@ -1,16 +1,15 @@
-/*!
+#!/usr/bin/env node
+/*
  * Bot.js : A Twitter bot that can retweet in response to the tweets matching multiple keywords.
- * Version 1.1
+ * Version 1.1.2
  	Changes from original design:
-			-Fixed bugs
-			-Added multiple keywords
-			-Added functionality and aethsetics to console.log statements
-	In next release:
+			-Added command line utilities
+	In upcoming releases:
 			-Add tracking log for time ran, total retweets, and retweet by keyword
  * Created by Travis Bennett (http://tdbennett.com @TravisDBennett.  Follow jSabot on twitter @javascriptSabot
- * Thanks to:
- 		@DebashisBarman for his original tutorial on building a twitterbot the original design for which his bot was modeled after and aims to improve.
-		@StephenGFriend for getting me beck into #dev, all the time he spends answering my questions about code, and for helping me to debug nearly everything I write.
+ * Credit:
+ 		@StephenGFriend for getting me beck into #dev, all the time he spends answering my questions about code, and for helping me to debug nearly everything I write.
+ 		@DebashisBarman for his tutorial on building a twitterbot his original design for which this bot was modeled after and aims to improve.
  * License : http://creativecommons.org/licenses/by-sa/3.0
  */
 
