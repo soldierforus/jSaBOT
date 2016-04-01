@@ -1,6 +1,12 @@
 {
+  "keywords": ["travisdbennett"],
+  "minutes": 7,
+  "consumer_key": "",
+  "consumer_secret": "",
+  "access_token": "",
+  "access_token_secret": "",
   "name": "jSaBOT",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A Twitter bot capable of searching and retweeting multiple keywords",
   "author": "Travis Bennett",
   "license": "CC-BY-3.0",
