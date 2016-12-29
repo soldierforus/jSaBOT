@@ -36,3 +36,6 @@ Installation Instructions:
 
 Licensed under http://creativecommons.org/licenses/by-sa/3.0
 Report error and bugs to travis.david.bennett@gmail.com - http://tdbennett.com
+
+JSaBOT v1.1.3 - Changelog
+Fixed bug encountered when "data.statuses[0].id_str" = undefined

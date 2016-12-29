@@ -93,11 +93,16 @@ function Retweet() {
 			console.log('jSaBOT could not find latest tweet: ' + error);
 			counter++;
 			Retweet();
-		}
-		else {
+		} else if (data.statuses.length == 0) {
+				console.log('jSaBOT could notread property id_str of undefined')
+				counter++;
+				Retweet();
+		} else {
 			var id = {
 				id : data.statuses[0].id_str
+
 			}
+
 
 			Bot.post('statuses/retweet/:id', id, BotRetweeted);
 
@@ -107,6 +112,7 @@ function Retweet() {
 					counter++;
 					Retweet();
 				}
+
 				else {
 					console.log('jSaBOT retweeted: ' + id.id + ' | ' + TWITTER_SEARCH_PHRASE);
 					counter++;
@@ -118,5 +124,5 @@ function Retweet() {
 }
 
 
-/* Initiate the Bot */
+/* Initialize the Bot */
 jSaBotInit();
