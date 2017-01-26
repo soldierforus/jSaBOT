@@ -37,8 +37,9 @@ function followed (event) {
 	//get user's account handle (screen name)
 	var name = event.source.name;
 	var screenName = event.source.screen_name;
+	var followTweet = packageJSON.followTweet;
 	//reply to new follower
-	tweetNow('@' + screenName + ', Thanks for the follow!  Help us spread the word about our #free #code #school http://tucsoncode.org ')
+	tweetNow('@' + screenName + ', ' + followTweet)
 }
 //*tweetNow*//
 function tweetNow(tweetText)  {
@@ -50,6 +51,7 @@ function tweetNow(tweetText)  {
 			console.log("jSaBOT received an error in replying" + " | " + err);
 		} else {
 			console.log ("jSabot thanked someone for following");
+			retweetCounter ++;
 		}
 	});
 }
