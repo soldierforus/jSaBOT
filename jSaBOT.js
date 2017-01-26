@@ -27,6 +27,33 @@ var Bot = new Twit({
 	access_token_secret: TWITTER_ACCESS_TOKEN_SECRET
 });
 
+//Initiate twitter stream API
+var stream = Bot.stream('user')
+/*When a user follows, the follow event will trigger the callback 'followed'*/
+stream.on('follow', followed);
+
+/*trigger the callback */
+function followed (event) {
+	//get user's account handle (screen name)
+	var name = event.source.name;
+	var screenName = event.source.screen_name;
+	//reply to new follower
+	tweetNow('@' + screenName + ', Thanks for the follow!  Help us spread the word about our #free #code #school http://tucsoncode.org ')
+}
+//*tweetNow*//
+function tweetNow(tweetText)  {
+	var tweet = {
+		status: tweetText
+	}
+	Bot.post('statuses/update', tweet, function (err, data, response){
+		if (err) {
+			console.log("jSaBOT received an error in replying" + " | " + err);
+		} else {
+			console.log ("jSabot thanked someone for following");
+		}
+	});
+}
+
 /* twitter phrase array counter */
 var counter = 0;
 
@@ -94,7 +121,7 @@ function Retweet() {
 			counter++;
 			Retweet();
 		} else if (data.statuses.length == 0) {
-				console.log('jSaBOT could notread property id_str of undefined')
+				console.log('jSaBOT could not read property id_str of undefined')
 				counter++;
 				Retweet();
 		} else {
