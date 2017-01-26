@@ -22,7 +22,8 @@ Installation Instructions:
 
 5) Edit the values below in the file "package.json"
   Add the values for:
-   "keywords": ["#keywordToSearch","otherKeywords"]
+   "keywords": ["#keywordToSearch","otherKeywords"].
+   "followTweet": "Insert message to be tweeted when someone follows."
    "minutes": number of minutes between retweets
    "consumer_key": "your key here"
    "consumer_secret": "your key here"
